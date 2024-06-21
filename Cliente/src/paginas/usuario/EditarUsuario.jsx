@@ -22,7 +22,7 @@ function EditarUsuario({ usuarioLogeado }) {
 
   async function cargarUsuario() {
     const respuesta = await fetch(
-      `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/${id}`
+      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/${id}`
     );
     const usuarioFetch = await respuesta.json();
     setUsuario(usuarioFetch);
@@ -43,7 +43,7 @@ function EditarUsuario({ usuarioLogeado }) {
   const enviarFormulario = (e) => {
     e.preventDefault();
     fetch(
-      `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/${id}`,
+      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/${id}`,
       {
         method: "PUT",
         headers: {

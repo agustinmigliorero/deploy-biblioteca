@@ -4,7 +4,7 @@ import fondoPagina from "../../assets/fondo_paginas.svg";
 function Desconectarse({ setUsuarioLogeado }) {
   async function desconectarUsuario() {
     fetch(
-      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/desconectarse",
+      "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/desconectarse",
       {
         credentials: "include",
       }

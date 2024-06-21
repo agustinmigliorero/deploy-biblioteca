@@ -25,7 +25,7 @@ function CrearUsuario({ setUsuarioLogeado }) {
   const enviarFormulario = (e) => {
     e.preventDefault();
     fetch(
-      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios",
+      "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios",
       {
         method: "POST",
         headers: {

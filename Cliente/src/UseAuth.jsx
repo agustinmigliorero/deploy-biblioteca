@@ -11,7 +11,7 @@ const useAuth = () => {
 
   async function fetchUsuarioLogeado() {
     const respuesta = await fetch(
-      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/usuario-logeado",
+      "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/usuario-logeado",
       {
         credentials: "include",
       }

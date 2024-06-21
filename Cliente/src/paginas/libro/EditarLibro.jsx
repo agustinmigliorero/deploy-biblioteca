@@ -25,7 +25,7 @@ function EditarLibro() {
 
   async function cargarLibro() {
     const respuesta = await fetch(
-      `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros/${id}`
+      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros/${id}`
     );
     const libroFetch = await respuesta.json();
     setLibro(libroFetch);
@@ -38,7 +38,7 @@ function EditarLibro() {
   const enviarFormulario = async (e) => {
     e.preventDefault();
     await fetch(
-      `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros/${id}`,
+      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros/${id}`,
       {
         method: "PUT",
         headers: {

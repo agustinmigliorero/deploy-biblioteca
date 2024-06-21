@@ -10312,7 +10312,7 @@ function Ph({ setUsuarioLogeado: e }) {
     a = (s) => {
       s.preventDefault(),
         fetch(
-          "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios",
+          "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -10414,7 +10414,7 @@ function Lh() {
   async function n() {
     const i = await (
       await fetch(
-        "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios"
+        "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios"
       )
     ).json();
     t(i);
@@ -10486,7 +10486,7 @@ function Th() {
   async function r() {
     const i = await (
       await fetch(
-        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/${n}`
+        `https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/${n}`
       )
     ).json();
     t(i);
@@ -10534,7 +10534,7 @@ function Rh({ usuarioLogeado: e }) {
   async function o() {
     const h = await (
       await fetch(
-        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/${r}`
+        `https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/${r}`
       )
     ).json();
     n(h),
@@ -10550,7 +10550,7 @@ function Rh({ usuarioLogeado: e }) {
   const a = (c) => {
     c.preventDefault(),
       fetch(
-        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/${r}`,
+        `https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/${r}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -10666,7 +10666,7 @@ function zh({ setUsuarioLogeado: e }) {
     a = (s) => {
       s.preventDefault(),
         fetch(
-          "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/iniciar-sesion",
+          "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/iniciar-sesion",
           {
             method: "POST",
             credentials: "include",
@@ -10728,7 +10728,7 @@ const Zc = "/assets/fondo_paginas-CCQm9WY3.svg";
 function Oh({ setUsuarioLogeado: e }) {
   async function t() {
     fetch(
-      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/desconectarse",
+      "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/desconectarse",
       { credentials: "include" }
     )
       .then((n) => n.json())
@@ -10778,7 +10778,7 @@ function Fh() {
     o = (a) => {
       a.preventDefault(),
         fetch(
-          "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros",
+          "https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros",
           {
             method: "POST",
             headers: { "Content-Type": "application/json" },
@@ -10940,7 +10940,7 @@ function Uh() {
   async function n() {
     const i = await (
       await fetch(
-        "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros"
+        "https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros"
       )
     ).json();
     t(i);
@@ -11031,7 +11031,7 @@ function Mh({ usuarioLogeado: e }) {
   async function h() {
     const C = await (
       await fetch(
-        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros/${r}`
+        `https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros/${r}`
       )
     ).json();
     n({
@@ -11045,7 +11045,7 @@ function Mh({ usuarioLogeado: e }) {
   async function m(S, C, R) {
     R ||
       (await fetch(
-        "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/comentarios",
+        "https://biblioteca-practicas-profesionalizantes.onrender.com/api/comentarios",
         {
           method: "POST",
           headers: { "Content-Type": "application/json" },
@@ -11074,7 +11074,7 @@ function Mh({ usuarioLogeado: e }) {
   function v() {
     confirm("Estas seguro de borrar el Libro?") &&
       fetch(
-        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros/${r}`,
+        `https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros/${r}`,
         { method: "DELETE" }
       )
         .then((C) => {
@@ -11129,7 +11129,7 @@ function Mh({ usuarioLogeado: e }) {
   }
   function f(S) {
     fetch(
-      `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/comentarios/${S}`,
+      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/comentarios/${S}`,
       {
         method: "PUT",
         headers: { "Content-Type": "application/json" },
@@ -11153,7 +11153,7 @@ function Mh({ usuarioLogeado: e }) {
   function d(S) {
     confirm("Estas seguro de borrar el comentario?") &&
       fetch(
-        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/comentarios/${S}`,
+        `https://biblioteca-practicas-profesionalizantes.onrender.com/api/comentarios/${S}`,
         {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
@@ -11335,7 +11335,7 @@ function Ah() {
   async function a() {
     const m = await (
       await fetch(
-        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros/${n}`
+        `https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros/${n}`
       )
     ).json();
     t(m);
@@ -11346,7 +11346,7 @@ function Ah() {
   const s = async (h) => {
     h.preventDefault(),
       await fetch(
-        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros/${n}`,
+        `https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros/${n}`,
         {
           method: "PUT",
           headers: { "Content-Type": "application/json" },
@@ -11659,7 +11659,7 @@ const cu = () => {
   async function l() {
     const o = await (
       await fetch(
-        "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/usuario-logeado",
+        "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/usuario-logeado",
         { credentials: "include" }
       )
     ).json();

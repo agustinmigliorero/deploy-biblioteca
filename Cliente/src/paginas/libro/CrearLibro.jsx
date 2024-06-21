@@ -26,7 +26,7 @@ function CrearLibro() {
   const enviarFormulario = (e) => {
     e.preventDefault();
     fetch(
-      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros",
+      "https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros",
       {
         method: "POST",
         headers: {

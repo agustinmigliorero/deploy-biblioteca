@@ -106,7 +106,5 @@ app.use((err, req, res, next) => {
 
 app.listen(process.env.PORT, () => {
   console.log(`Servidor encendido en el puerto: ${process.env.PORT}`);
-  console.log(
-    "http://https://biblioteca-practicas-profesionalizantes.onrender.com/"
-  );
+  console.log("https://biblioteca-practicas-profesionalizantes.onrender.com/");
 });

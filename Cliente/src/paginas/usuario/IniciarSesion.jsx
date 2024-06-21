@@ -21,7 +21,7 @@ function IniciarSesion({ setUsuarioLogeado }) {
   const enviarFormulario = (e) => {
     e.preventDefault();
     fetch(
-      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/iniciar-sesion",
+      "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/iniciar-sesion",
       {
         method: "POST",
         credentials: "include",
