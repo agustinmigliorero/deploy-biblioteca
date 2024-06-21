@@ -11,7 +11,7 @@ const useAuth = () => {
 
   async function fetchUsuarioLogeado() {
     const respuesta = await fetch(
-      "http://localhost:3000/api/usuarios/usuario-logeado",
+      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/usuario-logeado",
       {
         credentials: "include",
       }

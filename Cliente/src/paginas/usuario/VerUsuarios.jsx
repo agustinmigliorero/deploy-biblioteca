@@ -5,7 +5,9 @@ function MostrarTabla() {
   const [usuarios, setUsuarios] = useState([]);
 
   async function cargarUsuarios() {
-    const respuesta = await fetch("http://localhost:3000/api/usuarios");
+    const respuesta = await fetch(
+      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios"
+    );
     const usuariosFetch = await respuesta.json();
     setUsuarios(usuariosFetch);
   }

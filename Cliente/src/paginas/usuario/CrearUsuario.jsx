@@ -24,20 +24,23 @@ function CrearUsuario({ setUsuarioLogeado }) {
 
   const enviarFormulario = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/api/usuarios", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-      body: JSON.stringify({
-        dni: usuario.dni,
-        nombre: usuario.nombre,
-        apellido: usuario.apellido,
-        email: usuario.email,
-        password: usuario.password,
-      }),
-    })
+    fetch(
+      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          dni: usuario.dni,
+          nombre: usuario.nombre,
+          apellido: usuario.apellido,
+          email: usuario.email,
+          password: usuario.password,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         console.log(data);

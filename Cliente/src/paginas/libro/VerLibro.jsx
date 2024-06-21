@@ -16,7 +16,9 @@ function VerLibro({ usuarioLogeado }) {
   const [puntuacionComentario, setPuntuacionComentario] = useState(5);
 
   async function cargarLibro() {
-    const respuesta = await fetch(`http://localhost:3000/api/libros/${id}`);
+    const respuesta = await fetch(
+      `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros/${id}`
+    );
     const data = await respuesta.json();
     setLibro({
       ...data,
@@ -34,19 +36,22 @@ function VerLibro({ usuarioLogeado }) {
     if (comento) {
       return;
     }
-    const response = await fetch("http://localhost:3000/api/comentarios", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-      body: JSON.stringify({
-        idLibro: id,
-        documento: usuarioLogeado.usuario._id,
-        textoComentario: comentario,
-        puntuacion: puntuacion,
-      }),
-    })
+    const response = await fetch(
+      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/comentarios",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          idLibro: id,
+          documento: usuarioLogeado.usuario._id,
+          textoComentario: comentario,
+          puntuacion: puntuacion,
+        }),
+      }
+    )
       .then((res) => {
         return res.json();
       })
@@ -72,9 +77,12 @@ function VerLibro({ usuarioLogeado }) {
   function fetchBorrarLibro() {
     let borrar = confirm("Estas seguro de borrar el Libro?");
     if (borrar) {
-      fetch(`http://localhost:3000/api/libros/${id}`, {
-        method: "DELETE",
-      })
+      fetch(
+        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros/${id}`,
+        {
+          method: "DELETE",
+        }
+      )
         .then((res) => {
           navigate("/libros");
         })
@@ -154,17 +162,20 @@ function VerLibro({ usuarioLogeado }) {
   }
 
   function fetchEditarComentario(idComentario) {
-    fetch(`http://localhost:3000/api/comentarios/${idComentario}`, {
-      method: "PUT",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-      body: JSON.stringify({
-        textoComentario: textoComentario,
-        puntuacion: puntuacionComentario,
-      }),
-    })
+    fetch(
+      `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/comentarios/${idComentario}`,
+      {
+        method: "PUT",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          textoComentario: textoComentario,
+          puntuacion: puntuacionComentario,
+        }),
+      }
+    )
       .then((res) => {
         return res.json();
       })
@@ -191,13 +202,16 @@ function VerLibro({ usuarioLogeado }) {
   function fetchBorrarComentario(idComentario) {
     let borrar = confirm("Estas seguro de borrar el comentario?");
     if (borrar) {
-      fetch(`http://localhost:3000/api/comentarios/${idComentario}`, {
-        method: "DELETE",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-      })
+      fetch(
+        `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/comentarios/${idComentario}`,
+        {
+          method: "DELETE",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          credentials: "include",
+        }
+      )
         .then((res) => {
           cargarLibro();
         })

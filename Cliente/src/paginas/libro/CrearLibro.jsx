@@ -25,22 +25,25 @@ function CrearLibro() {
 
   const enviarFormulario = (e) => {
     e.preventDefault();
-    fetch("http://localhost:3000/api/libros", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      credentials: "include",
-      body: JSON.stringify({
-        titulo: libro.titulo,
-        autor: libro.autor,
-        categoria: libro.categoria,
-        copiaVirtual: libro.copiaVirtual,
-        copiasLibro: libro.copiasLibro,
-        imagen: libro.imagen,
-        descripcion: libro.descripcion,
-      }),
-    })
+    fetch(
+      "http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/libros",
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        credentials: "include",
+        body: JSON.stringify({
+          titulo: libro.titulo,
+          autor: libro.autor,
+          categoria: libro.categoria,
+          copiaVirtual: libro.copiaVirtual,
+          copiasLibro: libro.copiasLibro,
+          imagen: libro.imagen,
+          descripcion: libro.descripcion,
+        }),
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {

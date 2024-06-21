@@ -8,7 +8,9 @@ function VerUsuario() {
   const navigate = useNavigate();
 
   async function cargarUsuario() {
-    const respuesta = await fetch(`http://localhost:3000/api/usuarios/${id}`);
+    const respuesta = await fetch(
+      `http://https://biblioteca-practicas-profesionalizantes.onrender.com//api/usuarios/${id}`
+    );
     const usuarioFetch = await respuesta.json();
     setUsuario(usuarioFetch);
   }
