@@ -22,7 +22,7 @@ function EditarUsuario({ usuarioLogeado }) {
 
   async function cargarUsuario() {
     const respuesta = await fetch(
-      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/${id}`
+      `${import.meta.env.VITE_API_URL}/api/usuarios/${id}`
     );
     const usuarioFetch = await respuesta.json();
     setUsuario(usuarioFetch);
@@ -42,24 +42,21 @@ function EditarUsuario({ usuarioLogeado }) {
 
   const enviarFormulario = (e) => {
     e.preventDefault();
-    fetch(
-      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/${id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({
-          // dni: usuario.dni,
-          nombre: usuario.nombre,
-          apellido: usuario.apellido,
-          email: usuario.email,
-          rol: usuario.rol,
-          activo: usuario.activo,
-        }),
-      }
-    )
+    fetch(`${import.meta.env.VITE_API_URL}/api/usuarios/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify({
+        // dni: usuario.dni,
+        nombre: usuario.nombre,
+        apellido: usuario.apellido,
+        email: usuario.email,
+        rol: usuario.rol,
+        activo: usuario.activo,
+      }),
+    })
       .then((response) => response.json())
       .then(() => {
         navigate("/");

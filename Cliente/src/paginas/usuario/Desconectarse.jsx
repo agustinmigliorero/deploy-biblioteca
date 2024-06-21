@@ -3,12 +3,9 @@ import fondoPagina from "../../assets/fondo_paginas.svg";
 
 function Desconectarse({ setUsuarioLogeado }) {
   async function desconectarUsuario() {
-    fetch(
-      "https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/desconectarse",
-      {
-        credentials: "include",
-      }
-    )
+    fetch(`${import.meta.env.VITE_API_URL}/api/usuarios/desconectarse`, {
+      credentials: "include",
+    })
       .then((res) => {
         return res.json();
       })

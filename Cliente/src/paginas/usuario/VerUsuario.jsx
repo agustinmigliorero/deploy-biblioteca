@@ -9,7 +9,7 @@ function VerUsuario() {
 
   async function cargarUsuario() {
     const respuesta = await fetch(
-      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/usuarios/${id}`
+      `${import.meta.env.VITE_API_URL}/api/usuarios/${id}`
     );
     const usuarioFetch = await respuesta.json();
     setUsuario(usuarioFetch);

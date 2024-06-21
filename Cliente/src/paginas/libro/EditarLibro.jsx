@@ -25,7 +25,7 @@ function EditarLibro() {
 
   async function cargarLibro() {
     const respuesta = await fetch(
-      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros/${id}`
+      `{import.meta.env.VITE_API_URL}/api/libros/${id}`
     );
     const libroFetch = await respuesta.json();
     setLibro(libroFetch);
@@ -37,25 +37,22 @@ function EditarLibro() {
 
   const enviarFormulario = async (e) => {
     e.preventDefault();
-    await fetch(
-      `https://biblioteca-practicas-profesionalizantes.onrender.com/api/libros/${id}`,
-      {
-        method: "PUT",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
-        body: JSON.stringify({
-          titulo: libro.titulo,
-          autor: libro.autor,
-          categoria: libro.categoria,
-          copiaVirtual: libro.copiaVirtual,
-          copiasLibro: libro.copiasLibro,
-          imagen: libro.imagen,
-          descripcion: libro.descripcion,
-        }),
-      }
-    )
+    await fetch(`{import.meta.env.VITE_API_URL}/api/libros/${id}`, {
+      method: "PUT",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      credentials: "include",
+      body: JSON.stringify({
+        titulo: libro.titulo,
+        autor: libro.autor,
+        categoria: libro.categoria,
+        copiaVirtual: libro.copiaVirtual,
+        copiasLibro: libro.copiasLibro,
+        imagen: libro.imagen,
+        descripcion: libro.descripcion,
+      }),
+    })
       .then((response) => response.json())
       .then((data) => {
         if (data.error) {
