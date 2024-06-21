@@ -125,7 +125,7 @@ app.use((err, req, res, next) => {
 });
 //error handler
 
-app.listen(process.env.PORT_SERVER, () => {
-  console.log(`Servidor encendido en el puerto: ${process.env.PORT_SERVER}`);
+app.listen(process.env.PORT, () => {
+  console.log(`Servidor encendido en el puerto: ${process.env.PORT}`);
   console.log("http://localhost:3000");
 });
